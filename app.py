@@ -2,6 +2,7 @@
 # comment_service.py
 
 from flask import Flask, jsonify, request
+import requests
 
 app = Flask(__name__)
 
@@ -9,6 +10,8 @@ comments = {
     '1': {'user_id': '1', 'post_id': '1', 'comment': 'Amazing post!'},
     '2': {'user_id': '2', 'post_id': '2', 'comment': 'I did not know that!'},
 }
+
+
 @app.route('/')
 def home():
     return "Comment Service is live!"
